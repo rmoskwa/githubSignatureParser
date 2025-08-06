@@ -1,6 +1,6 @@
 # MATLAB Function Parser
 
-A comprehensive parser for extracting and documenting MATLAB functions from any repository, with automatic parameter detection including nargin-based optional parameters.
+A comprehensive parser for extracting and documenting MATLAB functions from any repository, with automatic parameter detection including nargin-based optional parameters. Currently this parser does NOT have a recursive option.
 
 ## Features
 
