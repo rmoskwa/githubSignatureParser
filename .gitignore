@@ -1,0 +1,6 @@
+.env
+.venv
+.claude
+data/*
+__pycache__
+output/*
