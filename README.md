@@ -1,6 +1,6 @@
 # MATLAB Function Parser
 
-A comprehensive parser for extracting and documenting MATLAB functions from any repository, with automatic parameter detection including nargin-based optional parameters.
+A comprehensive parser for extracting and documenting MATLAB functions from any repository, with automatic parameter detection including nargin-based optional parameters. Currently, this only applies to repositories on the local system, e.g. cloning a Github repo. 
 
 ## Features
 
@@ -9,7 +9,7 @@ A comprehensive parser for extracting and documenting MATLAB functions from any 
   - Preserves exact parameter names from function signatures
   - Detects both InputParser and nargin-based optional parameters
   - Supports multiple InputParser formats (`parser.addRequired` and `addRequired(parser, ...)`)
-- **LLM Enhancement**: Uses Google Gemini to enhance function documentation
+- **LLM Enhancement**: Uses LLM to enhance function documentation
 - **Database Integration**: Updates Supabase database with parsed function data
 - **Vector Embeddings**: Generates embeddings for semantic search
 - **Flexible File Filtering**: 
@@ -20,8 +20,8 @@ A comprehensive parser for extracting and documenting MATLAB functions from any 
 ## Requirements
 
 - Python 3.10+
-- Google Gemini API key
-- Supabase project with appropriate schema
+- LLM API key
+- Database (current repo uses Supabase). 
 
 ## Installation
 
