@@ -1,21 +1,7 @@
 # MATLAB Function Parser
 
 A comprehensive parser for extracting and documenting MATLAB functions from any repository, with automatic parameter detection including nargin-based optional parameters. This only applies to repositories on the local system, e.g. cloning a Github repo. Currently this parser does NOT have a recursive option.
-
-## Features
-
-- **Comprehensive Function Extraction**: Parses ALL functions in MATLAB files (main, helper, and internal)
-- **Accurate Parameter Detection**: 
-  - Preserves exact parameter names from function signatures
-  - Detects both InputParser and nargin-based optional parameters
-  - Supports multiple InputParser formats (`parser.addRequired` and `addRequired(parser, ...)`)
-- **LLM Enhancement**: Uses LLM to enhance function documentation
-- **Database Integration**: Updates Supabase database with parsed function data
-- **Vector Embeddings**: Generates embeddings for semantic search
-- **Flexible File Filtering**: 
-  - Optional inclusion of test files
-  - Customizable skip patterns
-  - Intelligent detection of non-function files
+This repo was created for personal use to scrape data from Pulseq scripts.
 
 ## Requirements
 
@@ -93,32 +79,5 @@ python process_pulseq_api.py --path ./matlab --dry-run
 # Verify database contents
 python process_pulseq_api.py --verify-only
 ```
-
-## Project Structure
-
-```
-├── process_pulseq_api.py       # Main processing script
-├── src/
-│   ├── comprehensive_parser.py  # MATLAB function parser with nargin detection
-│   ├── enhanced_llm_processor.py # LLM enhancement for documentation
-│   ├── enhanced_db_manager_updated.py # Database operations
-│   └── embeddings.py           # Vector embedding generation
-├── output/
-│   └── full_processing/        # Processed function JSON files
-├── requirements.txt            # Python dependencies
-└── .env                       # Environment variables (create this)
-```
-
-## Key Components
-
-### comprehensive_parser.py
-- Extracts all functions from MATLAB files
-- Detects nargin patterns for optional parameters
-- Preserves exact parameter names from signatures
-- Categorizes functions (main, helper, internal)
-
-### enhanced_llm_processor.py
-- Enhances function documentation using LLM
-- Generates detailed parameter descriptions
 
 
